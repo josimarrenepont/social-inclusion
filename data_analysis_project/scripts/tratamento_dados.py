@@ -1,16 +1,11 @@
-
 import pandas as pd
 
-dados = pd.read_csv('../data/dados.csv')
 
+def tratar_dados():
+    dados = pd.read_csv('../data/dados.csv')
+    dados = dados.dropna()
+    dados.to_csv('../data/dados_tratados.csv', index=False)
+    print("Dados tratados e salvos com sucesso.")
 
-print(dados.head())
-
-
-print(dados.info())
-
-
-dados = dados.dropna()
-
-
-dados.to_csv('../data/dados_limpos.csv', index=False)
+if __name__ == "__main__":
+    tratar_dados()
