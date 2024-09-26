@@ -19,7 +19,7 @@ def gerar_relatorio():
     c.drawString(100, 710, "1. Distribuição de Gênero")
     c.drawString(100, 690, "2. Distribuição de Escolaridade")
 
-    # Verifique a existência das imagens
+    
     genero_img_path = "visualizations/distribuicao_genero.png"
     escolaridade_img_path = "visualizations/distribuicao_escolaridade.png"
 
