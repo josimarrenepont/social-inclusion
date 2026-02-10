@@ -1,0 +1,158 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "matplotlib.pyplot",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "matplotlib.pyplot",
+        "description": "matplotlib.pyplot",
+        "detail": "matplotlib.pyplot",
+        "documentation": {}
+    },
+    {
+        "label": "pandas",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "pandas",
+        "description": "pandas",
+        "detail": "pandas",
+        "documentation": {}
+    },
+    {
+        "label": "seaborn",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "seaborn",
+        "description": "seaborn",
+        "detail": "seaborn",
+        "documentation": {}
+    },
+    {
+        "label": "letter",
+        "importPath": "reportlab.lib.pagesizes",
+        "description": "reportlab.lib.pagesizes",
+        "isExtraImport": true,
+        "detail": "reportlab.lib.pagesizes",
+        "documentation": {}
+    },
+    {
+        "label": "letter",
+        "importPath": "reportlab.lib.pagesizes",
+        "description": "reportlab.lib.pagesizes",
+        "isExtraImport": true,
+        "detail": "reportlab.lib.pagesizes",
+        "documentation": {}
+    },
+    {
+        "label": "letter",
+        "importPath": "reportlab.lib.pagesizes",
+        "description": "reportlab.lib.pagesizes",
+        "isExtraImport": true,
+        "detail": "reportlab.lib.pagesizes",
+        "documentation": {}
+    },
+    {
+        "label": "canvas",
+        "importPath": "reportlab.pdfgen",
+        "description": "reportlab.pdfgen",
+        "isExtraImport": true,
+        "detail": "reportlab.pdfgen",
+        "documentation": {}
+    },
+    {
+        "label": "canvas",
+        "importPath": "reportlab.pdfgen",
+        "description": "reportlab.pdfgen",
+        "isExtraImport": true,
+        "detail": "reportlab.pdfgen",
+        "documentation": {}
+    },
+    {
+        "label": "canvas",
+        "importPath": "reportlab.pdfgen",
+        "description": "reportlab.pdfgen",
+        "isExtraImport": true,
+        "detail": "reportlab.pdfgen",
+        "documentation": {}
+    },
+    {
+        "label": "tratar_dados",
+        "kind": 2,
+        "importPath": "data_analysis_project.scripts.gerar_relatorio",
+        "description": "data_analysis_project.scripts.gerar_relatorio",
+        "peekOfCode": "def tratar_dados():\n    print(\"Current working directory:\", os.getcwd())\n    dados = pd.read_csv(r'C:\\temp\\ws-vscode\\social-inclusion\\data_analysis_project\\data\\dados.csv', encoding='latin1', delimiter=';')\n    return dados\ndef gerar_visualizacoes(dados):\n    # Criar diretório de visualizações, se não existir\n    if not os.path.exists('visualizations'):\n        os.makedirs('visualizations')\n        print(\"Diretório 'visualizations' criado.\")\n    print(dados.head())",
+        "detail": "data_analysis_project.scripts.gerar_relatorio",
+        "documentation": {}
+    },
+    {
+        "label": "gerar_visualizacoes",
+        "kind": 2,
+        "importPath": "data_analysis_project.scripts.gerar_relatorio",
+        "description": "data_analysis_project.scripts.gerar_relatorio",
+        "peekOfCode": "def gerar_visualizacoes(dados):\n    # Criar diretório de visualizações, se não existir\n    if not os.path.exists('visualizations'):\n        os.makedirs('visualizations')\n        print(\"Diretório 'visualizations' criado.\")\n    print(dados.head())\n    print(dados.columns)\n    # Visualização para a distribuição de gênero\n    plt.figure(figsize=(8, 6))\n    sns.countplot(x='Gênero', data=dados)",
+        "detail": "data_analysis_project.scripts.gerar_relatorio",
+        "documentation": {}
+    },
+    {
+        "label": "gerar_relatorio",
+        "kind": 2,
+        "importPath": "data_analysis_project.scripts.gerar_relatorio",
+        "description": "data_analysis_project.scripts.gerar_relatorio",
+        "peekOfCode": "def gerar_relatorio():\n    relatorios_path = \"relatorios\"\n    if not os.path.exists(relatorios_path):\n        os.makedirs(relatorios_path)\n        print(\"Diretório 'relatorios' criado.\")\n    pdf_path = os.path.join(relatorios_path, \"relatorio_final.pdf\")\n    print(f\"Arquivo PDF será salvo em: {pdf_path}\")\n    c = canvas.Canvas(pdf_path, pagesize=letter)\n    c.drawString(100, 750, \"Relatório Final - Análise de Dados LGBT\")\n    c.drawString(100, 730, \"Resumo das Descobertas:\")",
+        "detail": "data_analysis_project.scripts.gerar_relatorio",
+        "documentation": {}
+    },
+    {
+        "label": "gerar_relatorio",
+        "kind": 2,
+        "importPath": "data_analysis_project.scripts.main",
+        "description": "data_analysis_project.scripts.main",
+        "peekOfCode": "def gerar_relatorio():\n    relatorios_path = \"relatorios\"\n    if not os.path.exists(relatorios_path):\n        os.makedirs(relatorios_path)\n        print(\"Diretório 'relatorios' criado.\")\n    pdf_path = os.path.join(relatorios_path, \"relatorio_final.pdf\")\n    print(f\"Arquivo PDF será salvo em: {pdf_path}\")\n    c = canvas.Canvas(pdf_path, pagesize=letter)\n    c.drawString(100, 750, \"Relatório Final - Análise de Dados LGBT\")\n    c.drawString(100, 730, \"Resumo das Descobertas:\")",
+        "detail": "data_analysis_project.scripts.main",
+        "documentation": {}
+    },
+    {
+        "label": "tratar_dados",
+        "kind": 2,
+        "importPath": "data_analysis_project.scripts.tratamento_dados",
+        "description": "data_analysis_project.scripts.tratamento_dados",
+        "peekOfCode": "def tratar_dados():\n    print(\"Current working directory:\", os.getcwd())\n    dados = pd.read_csv(r'C:\\temp\\ws-vscode\\social-inclusion\\data_analysis_project\\data\\dados.csv', encoding='latin1', delimiter=';')\n    return dados\ndef gerar_visualizacoes(dados):\n    print(dados.head())\n    print(dados.columns)\n    plt.figure(figsize=(8, 6))\n    sns.countplot(x='Gênero', data=dados)\n    plt.title('Distribuição de Gênero')",
+        "detail": "data_analysis_project.scripts.tratamento_dados",
+        "documentation": {}
+    },
+    {
+        "label": "gerar_visualizacoes",
+        "kind": 2,
+        "importPath": "data_analysis_project.scripts.tratamento_dados",
+        "description": "data_analysis_project.scripts.tratamento_dados",
+        "peekOfCode": "def gerar_visualizacoes(dados):\n    print(dados.head())\n    print(dados.columns)\n    plt.figure(figsize=(8, 6))\n    sns.countplot(x='Gênero', data=dados)\n    plt.title('Distribuição de Gênero')\n    plt.savefig('../visualizations/distribuicao_genero.png')\n    plt.close()\n    plt.figure(figsize=(8, 6))\n    sns.countplot(x='Escolaridade', data=dados)",
+        "detail": "data_analysis_project.scripts.tratamento_dados",
+        "documentation": {}
+    },
+    {
+        "label": "gerar_relatorio",
+        "kind": 2,
+        "importPath": "data_analysis_project.scripts.tratamento_dados",
+        "description": "data_analysis_project.scripts.tratamento_dados",
+        "peekOfCode": "def gerar_relatorio():\n    relatorios_path = \"relatorios\"\n    if not os.path.exists(relatorios_path):\n        os.makedirs(relatorios_path)\n        print(\"Diretório 'relatorios' criado.\")\n    pdf_path = os.path.join(relatorios_path, \"relatorio_final.pdf\")\n    print(f\"Arquivo PDF será salvo em: {pdf_path}\")\n    c = canvas.Canvas(pdf_path, pagesize=letter)\n    c.drawString(100, 750, \"Relatório Final - Análise de Dados LGBT\")\n    c.drawString(100, 730, \"Resumo das Descobertas:\")",
+        "detail": "data_analysis_project.scripts.tratamento_dados",
+        "documentation": {}
+    },
+    {
+        "label": "gerar_visualizacoes",
+        "kind": 2,
+        "importPath": "data_analysis_project.scripts.visualizacao_dados",
+        "description": "data_analysis_project.scripts.visualizacao_dados",
+        "peekOfCode": "def gerar_visualizacoes():\n    dados = pd.read_csv('../data/dados_tratados.csv', delimiter=';')\n    print(dados.head())\n    print(dados.columns)\n    plt.figure(figsize=(8, 6))\n    sns.countplot(x='Gênero', data=dados)\n    plt.title('Distribuição de Gênero')\n    plt.savefig('../visualizations/distribuicao_genero.png')\n    plt.close()\n    plt.figure(figsize=(8, 6))",
+        "detail": "data_analysis_project.scripts.visualizacao_dados",
+        "documentation": {}
+    }
+]
